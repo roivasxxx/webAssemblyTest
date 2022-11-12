@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import loader from "@assemblyscript/loader";
+import MyCanvas from "./components/MyCanvas";
 
 export const loadWASM = async () => {
   console.debug("Loading wasm: ", "../public/optimized.wasm");
@@ -30,6 +31,7 @@ const App = () => {
   return (
     <div>
       <h1>Hello React</h1>
+      <MyCanvas wrapperHeight={400} wrapperWidth={400} />
     </div>
   );
 };
